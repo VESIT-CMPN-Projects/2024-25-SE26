@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteer Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Georgia', serif;
+      background-color: #ffffff;
+      color: #333;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      background-color: #4b0082;
+      color: white;
+      padding: 15px 30px;
+    }
+
+    .navbar nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .logo, .user-avatar img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .user-avatar {
+      margin-right: 20px;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom, #9f3ed5, #4934d7);
+      color: white;
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .btn-group {
+      margin-top: 2rem;
+    }
+
+    .btn.orange {
+      background-color: #f97316;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn.orange:hover {
+      background-color: #ea580c;
+    }
+
+    .benefits-section {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .benefits-section h2 {
+      font-size: 2rem;
+      color: #7c3aed;
+      margin-bottom: 2rem;
+    }
+
+    .benefit-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .benefit-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      width: 250px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .benefit-card:nth-child(1) {
+      background-color: #fef08a;
+    }
+
+    .benefit-card:nth-child(2) {
+      background-color: #d8b4fe;
+    }
+
+    .benefit-card:nth-child(3) {
+      background-color: #a78bfa;
+    }
+
+    .benefit-card h3 {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      color: #111827;
+    }
+
+    .benefit-card p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    footer {
+      background-color: #4b0082;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .footer-section a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+
+    .image1 {
+      width: 150px;
+      height: 120px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="after-sign-up-page">
+    <header class="navbar">
+      <img class="logo" src="logo.png" alt="Logo" />
+      <nav>
+        <ul>
+          <li><a href="landing.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="registerCenter.html">Register Center</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </nav>
+      <div class="user-avatar">
+        <img src="user.png" alt="User Avatar" />
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Be the Change.<br>Volunteer Today!</h1>
+      <p>Join our community of passionate educators making a difference in students' lives</p>
+      <div class="btn-group">
+        <a href="joinSession.html" class="btn orange">Join a new Session</a>
+      </div>
+    </section>
+
+    <section class="benefits-section">
+      <h2>Why Volunteer with Us?</h2>
+      <div class="benefit-cards">
+        <div class="benefit-card">
+          <img src="https://www.shutterstock.com/image-photo/impact-word-made-building-blocks-260nw-650985967.jpg" alt="Impact" class="image1">
+          <h3>Make an Impact</h3>
+          <p>Transform lives through education and create lasting change in your community</p>
+        </div>
+        <div class="benefit-card">
+          <img src="https://www.cypherlearning.com/hs-fs/hubfs/blog/business/posts/2022/11/MATRIX-blog-01_4%20Skills%20development%20activities%20for%20real-world%20knowledge%20building-HEADER.png?width=1036&height=500&name=MATRIX-blog-01_4%20Skills%20development%20activities%20for%20real-world%20knowledge%20building-HEADER.png" alt="Skills" class="image1">
+          <h3>Build Skills</h3>
+          <p>Develop leadership, communication, and teaching abilities</p>
+        </div>
+        <div class="benefit-card">
+          <img src="https://miro.medium.com/v2/resize:fit:1400/1*M-b093jQIpmapIIaxH7N7g.jpeg" alt="Community" class="image1">
+          <h3>Join Community</h3>
+          <p>Connect with like-minded individuals dedicated to education</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

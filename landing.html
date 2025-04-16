@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>After Sign Up Page</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f1fa;
+      color: #333;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #4b0082;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #dcd0f5;
+    }
+
+    .user-info {
+      margin-left: 1rem;
+      font-size: 1rem;
+    }
+
+    .user-avatar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 1rem;
+    }
+
+    .user-avatar img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .signout {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+    }
+
+    .hero {
+      background-color: #e6d4f2;
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      color: #4b0082;
+      font-weight: 600;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .session-wrapper {
+      background-color: #d1b3ff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .session-wrapper h2 {
+      text-align: center;
+      color: #4b0082;
+      margin-bottom: 1.5rem;
+    }
+
+    .session-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .session-card {
+      background: #f6edff;
+      padding: 1rem;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .session-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 2rem 0 0;
+    }
+
+    .session-buttons button {
+      background-color: #7a42f4;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .session-buttons button:hover {
+      background-color: #5e2db4;
+    }
+
+    /* Impact Section */
+    .impact-section {
+      background-color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-top: 2px solid #e6d4f2;
+    }
+
+    .impact-section h2 {
+      color: #4b0082;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .impact-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .impact-card {
+      width: 280px;
+      background-color: #f4e8ff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .impact-card h3 {
+      margin-bottom: 0.5rem;
+      color: #4b0082;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #4b0082;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding-top: 0.5rem;
+    }
+
+    .footer-section a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="after-sign-up-page">
+    <header class="navbar">
+      <img class="logo" src="logo.png" alt="Logo" />
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="registerCenter.html">Register Center</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </nav>
+      <div class="user-info">
+        <span>Welcome Back, <span class="dynamic-name"></span></span>
+      </div>
+      <div class="user-avatar">
+        <img src="user.png" alt="User Avatar" />
+        <a class="signout" href="index.html">Sign Out</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Continue making a difference!</h1>
+    </section>
+
+    <main>
+      <div class="session-wrapper">
+        <h2>Upcoming Sessions</h2>
+        <div class="session-cards" id="session-cards"></div>
+        <div class="session-buttons">
+          <button onclick="joinSession()">Join New Session</button>
+        </div>
+      </div>
+
+      <div class="session-wrapper">
+        <h2>Your Created Sessions</h2>
+        <div class="session-cards" id="created-session-cards"></div>
+        <div class="session-buttons">
+          <button onclick="createSession()">Create New Session</button>
+        </div>
+      </div>
+
+      <!-- New Info Section -->
+      <section class="impact-section">
+        <h2>Impact Highlights</h2>
+        <div class="impact-cards">
+          <div class="impact-card">
+            <h3>+100+ Students Reached</h3>
+            <p>Through our network of dedicated volunteers and centers.</p>
+          </div>
+          <div class="impact-card">
+            <h3>10+ Centers Registered</h3>
+            <p>Spanning urban and rural communities alike.</p>
+          </div>
+          <div class="impact-card">
+            <h3>National Network</h3>
+            <p>Volunteers from all over the country can contribute.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async function () {
+      const userName = localStorage.getItem("username");
+      const userEmail = localStorage.getItem("useremail");
+      const nameElement = document.querySelector(".dynamic-name");
+      const sessionContainer = document.getElementById("session-cards");
+      const createdSessionContainer = document.getElementById("created-session-cards");
+
+      if (userName && nameElement) {
+        nameElement.textContent = userName + "!";
+      } else {
+        window.location.href = "signin.html";
+        return;
+      }
+
+      if (!userEmail) {
+        window.location.href = "signin.html";
+        return;
+      }
+
+      try {
+        const response = await fetch("http://localhost:3000/sessions", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: userEmail })
+        });
+
+        const sessions = await response.json();
+        sessionContainer.innerHTML = "";
+
+        if (sessions.length === 0) {
+          sessionContainer.innerHTML = "<p>No upcoming sessions found.</p>";
+        } else {
+          sessions.forEach(session => {
+            const card = document.createElement("div");
+            card.className = "session-card";
+            card.innerHTML = `
+              <h3>${session.subjects}</h3>
+              <p class="grade">Grade ${session.class_level}</p>
+              <p class="time">${session.date_session}</p>
+              <p class="center">Center: ${session.center_name}</p>
+              <p class="center_email">Email: ${session.center_email}</p>
+            `;
+            sessionContainer.appendChild(card);
+          });
+        }
+      } catch (error) {
+        console.error("Error fetching sessions:", error);
+        sessionContainer.innerHTML = "<p>No sessions yet... Be a Volunteer now!</p>";
+      }
+
+      try {
+        const createdResponse = await fetch("http://localhost:3000/createdSessions", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: userEmail })
+        });
+
+        const createdSessions = await createdResponse.json();
+        createdSessionContainer.innerHTML = "";
+
+        if (createdSessions.length === 0) {
+          createdSessionContainer.innerHTML = "<p>You haven't created any sessions yet.</p>";
+        } else {
+          createdSessions.forEach(session => {
+            const card = document.createElement("div");
+            card.className = "session-card";
+            card.innerHTML = `
+              <h3>${session.subjects}</h3>
+              <p class="grade">Grade ${session.class_level}</p>
+              <p class="time">${session.date_session}</p>
+              <p class="volunteer">Volunteer: ${session.volunteer_email}</p>
+              <p>Status: ${session.status}</p>
+            `;
+            createdSessionContainer.appendChild(card);
+          });
+        }
+      } catch (error) {
+        console.error("Error fetching created sessions:", error);
+        createdSessionContainer.innerHTML = "<p>None at the moment!</p>";
+      }
+    });
+
+    function joinSession() {
+      window.location.href = "joinSession.html";
+    }
+
+    function createSession() {
+      window.location.href = "createSession.html";
+    }
+  </script>
+</body>
+</html>
