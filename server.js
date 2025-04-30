@@ -60,7 +60,7 @@ app.post("/signup", (req, res) => {
       service: "gmail", // or another email service
       auth: {
         user: "ishjyot@gmail.com",
-        pass: "cxdh pqdo nlfe xydu", // use an app password, not your main password
+        pass: "**** **** **** ****", // Password not mentioned here for safety concerns
       },
     });
 
@@ -248,7 +248,7 @@ app.post("/update-session", (req, res) => {
         service: "gmail", // or another email service
         auth: {
           user: "ishjyot@gmail.com",
-          pass: "cxdh pqdo nlfe xydu", // Ensure you're using an app password
+          pass: "**** **** **** ****", // Password not mentioned for safety concerns
         },
       });
 
